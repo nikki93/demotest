@@ -3,3 +3,6 @@ bin/debug
 bin/release
 demotest.make
 Makefile
+
+*.swp
+tags
