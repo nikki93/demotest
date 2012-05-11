@@ -26,7 +26,6 @@ class Bubble : public Object
         float _lifeTime;
         float _time;
 
-
     public:
         Bubble(const ofVec2f &pos, float radius, float lifeTime = 2.0f, const ofColor &color = ofColor::white, 
                 const ofVec2f &vel = ofVec2f(0, -5), const ofVec2f &acc = ofVec2f(0, 0))
@@ -67,8 +66,14 @@ class Bubble : public Object
 
         void draw()
         {
-            ofSetColor(_color);
+            ofColor color2(_color);
+            color2.a *= 0.5;
+
+            ofSetColor(color2);
             ofCircle(_pos, _radius);
+
+            ofSetColor(_color);
+            ofCircle(_pos, _radius * 0.5);
         }
 };
 

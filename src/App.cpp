@@ -68,8 +68,9 @@ void App::mouseDragged(int x, int y, int button)
 #define BUBBLE_LIFETIME 4, 8
 #define BUBBLE_VEL -20, 20
 #define BUBBLE_ACC -1, 1
-    for (int i = 0; i < w; i += ofRandom(3, 40))
-        for (int j = 0; j < h; j += ofRandom(3, 40))
+#define INCR_RANGE 3, 30
+    for (int i = 0; i < w; i += ofRandom(INCR_RANGE))
+        for (int j = 0; j < h; j += ofRandom(INCR_RANGE))
             if (_pix.getColor(i, j).getLightness() > 128)
                 Object::add(new Bubble(ofVec2f(x + i, y + j), ofRandom(BUBBLE_RADIUS), 
                             ofRandom(BUBBLE_LIFETIME), ofColor::white, 
