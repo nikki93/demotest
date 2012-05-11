@@ -2,6 +2,8 @@
 ----------------------------------------- demotest ------------------------------------------
 ---------------------------------------------------------------------------------------------
 
+arch = "linux" -- linux/linux64
+
 -- Project ----------------------------------------------------------------------------------
 
 project.name = "demotest"
@@ -89,24 +91,24 @@ package.includepaths = {
 }
 
 package.libpaths = {
-    "../../Libraries/of/libs/openFrameworksCompiled/lib/linux64",
-    "../../Libraries/of/libs/freetype/lib/linux64",
-    "../../Libraries/of/libs/kiss/lib/linux64",
-    "../../Libraries/of/libs/portaudio/lib/linux64",
-    "../../Libraries/of/libs/rtAudio/lib/linux64",
-    "../../Libraries/of/libs/tess2/lib/linux64",
-    "../../Libraries/of/libs/poco/lib/linux64",
-    "../../Libraries/of/libs/poco/lib/linux64",
-    "../../Libraries/of/libs/poco/lib/linux64",
-    "../../Libraries/of/libs/poco/lib/linux64",
-    "../../Libraries/of/libs/fmodex/lib/linux64",
-    "../../Libraries/of/libs/freetype/lib/linux64",
-    "../../Libraries/of/libs/kiss/lib/linux64",
-    "../../Libraries/of/libs/openFrameworksCompiled/lib/linux64",
-    "../../Libraries/of/libs/poco/lib/linux64",
-    "../../Libraries/of/libs/portaudio/lib/linux64",
-    "../../Libraries/of/libs/rtAudio/lib/linux64",
-    "../../Libraries/of/libs/tess2/lib/linux64"
+    "../../Libraries/of/libs/openFrameworksCompiled/lib/" .. arch,
+    "../../Libraries/of/libs/freetype/lib/" .. arch,
+    "../../Libraries/of/libs/kiss/lib/" .. arch,
+    "../../Libraries/of/libs/portaudio/lib/" .. arch,
+    "../../Libraries/of/libs/rtAudio/lib/" .. arch,
+    "../../Libraries/of/libs/tess2/lib/" .. arch,
+    "../../Libraries/of/libs/poco/lib/" .. arch,
+    "../../Libraries/of/libs/poco/lib/" .. arch,
+    "../../Libraries/of/libs/poco/lib/" .. arch,
+    "../../Libraries/of/libs/poco/lib/" .. arch,
+    "../../Libraries/of/libs/fmodex/lib/" .. arch,
+    "../../Libraries/of/libs/freetype/lib/" .. arch,
+    "../../Libraries/of/libs/kiss/lib/" .. arch,
+    "../../Libraries/of/libs/openFrameworksCompiled/lib/" .. arch,
+    "../../Libraries/of/libs/poco/lib/" .. arch,
+    "../../Libraries/of/libs/portaudio/lib/" .. arch,
+    "../../Libraries/of/libs/rtAudio/lib/" .. arch,
+    "../../Libraries/of/libs/tess2/lib/" .. arch
 }
 
 -- Libraries to link to ---------------------------------------------------------------------
