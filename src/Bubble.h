@@ -66,14 +66,25 @@ class Bubble : public Object
 
         void draw()
         {
-            ofColor color2(_color);
-            color2.a *= 0.5;
+            //draw N circles, fading out
+            static const int N = 3;
+            static const float f = 0.6;
 
-            ofSetColor(color2);
-            ofCircle(_pos, _radius);
+            //radii[] = { _radius/f^(N-1), _radius/f^(N-2), ..., _radius }
+            //inner to outer circle
+            float radii[N];
+            radii[N - 1] = _radius;
+            for (int i = N - 2; i >= 0; --i)
+                radii[i] = radii[i + 1] * f;
 
-            ofSetColor(_color);
-            ofCircle(_pos, _radius * 0.5);
+            //decay colors from in to out
+            ofColor color(_color);
+            for (int i = 0; i < N; ++i)
+            {
+                ofSetColor(color);
+                ofCircle(_pos, radii[i]);
+                color.a *= f;
+            }
         }
 };
 
