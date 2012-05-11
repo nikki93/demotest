@@ -3,16 +3,20 @@
 
 #include "ofBaseApp.h"
 #include "ofImage.h"
+#include "ofVideoPlayer.h"
 
 class App : 
     public ofBaseApp
 {
     protected:
-        ofPixels _pix;
-        ofVec2f _wind;
+        ofVideoPlayer _vid;
+
+        ofVec2f _windTarget;
+        float _windTimer;
 
     public:
         App();
+        ~App();
         void setup();
         void update();
         void draw();

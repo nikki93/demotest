@@ -67,8 +67,11 @@ class Bubble : public Object
         void draw()
         {
             //draw N circles, fading out
-            static const int N = 3;
-            static const float f = 0.6;
+            static const int N = 4;
+
+            //static const float f = 0.6;
+            float f = 1 - _time/_lifeTime;
+            f *= 0.7;
 
             //radii[] = { _radius/f^(N-1), _radius/f^(N-2), ..., _radius }
             //inner to outer circle

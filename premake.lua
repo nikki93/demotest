@@ -2,7 +2,7 @@
 ----------------------------------------- demotest ------------------------------------------
 ---------------------------------------------------------------------------------------------
 
-arch = "linux" -- linux/linux64
+arch = "linux64" -- linux/linux64
 
 -- Project ----------------------------------------------------------------------------------
 
@@ -129,7 +129,14 @@ package.links = {
     "openal",
     "sndfile",
     "freeimage",
-    "GLU"
+    "GLU",
+    "gstvideo-0.10",
+    "gstapp-0.10",
+    "gstbase-0.10",
+    "gstreamer-0.10",
+    "gobject-2.0",
+    "glib-2.0"
+
     --"freetype",
     --"portaudio",
     --"RtAudio",
@@ -145,14 +152,8 @@ package.links = {
     --"pango-1.0",
     --"freetype",
     --"fontconfig",
-    --"gobject-2.0",
-    --"glib-2.0",
     --"jack",
     --"pthread",
-    --"gstvideo-0.10",
-    --"gstapp-0.10",
-    --"gstbase-0.10",
-    --"gstreamer-0.10",
     --"gobject-2.0",
     --"gmodule-2.0",
     --"gthread-2.0",
